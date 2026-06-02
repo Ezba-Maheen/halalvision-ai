@@ -4,11 +4,23 @@
     <meta charset="UTF-8">
     <title>HalalVision AI</title>
     <style>
-        body { font-family: 'Segoe UI', Arial, sans-serif; background: #f4f6f9; margin: 0; padding: 0; }
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background: #f4f6f9;
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;       /* full viewport height */
+            display: flex;
+            flex-direction: column;  /* stack header, main, footer */
+        }
         header { background: #16a085; color: white; padding: 20px; text-align: center; }
         h1 { margin: 0; font-size: 2.5em; }
         h3 { margin: 5px 0 0; font-weight: normal; }
-        main { text-align: center; padding: 20px; }
+        main {
+            flex: 1;                 /* take up remaining space */
+            text-align: center;
+            padding: 20px;
+        }
         form { margin: 20px auto; }
         input { padding: 10px; width: 300px; border-radius: 5px; border: 1px solid #ccc; }
         button { padding: 10px 20px; margin-left: 10px; background: #16a085; color: white; border: none; border-radius: 5px; cursor: pointer; }
@@ -19,7 +31,13 @@
         .uncertain { background: #f1c40f; color: black; padding: 5px 10px; border-radius: 15px; margin: 5px; display: inline-block; }
         .product-image { max-width: 200px; margin: 10px auto; display: block; border-radius: 10px; }
         .graph-card { background: white; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); padding: 20px; max-width: 700px; margin: 20px auto; }
-        footer { background: #ecf0f1; color: #7f8c8d; font-size: 14px; text-align: center; padding: 15px; margin-top: 20px; }
+        footer {
+            background: #ecf0f1;
+            color: #7f8c8d;
+            font-size: 14px;
+            text-align: center;
+            padding: 15px;
+        }
     </style>
 </head>
 <body>
@@ -36,14 +54,12 @@
 
         {% if product_name %}
         <div class="card">
-            <!-- Product image -->
             {% if product_image %}
                 <img src="{{ product_image }}" alt="Product Image" class="product-image">
             {% endif %}
 
             <h2>Product: {{ product_name }}</h2>
 
-            <!-- Summary line -->
             {% set haram_count = ingredients|selectattr(0, 'equalto', 'haram')|list|length %}
             {% if haram_count > 0 %}
                 <p style="color:red; font-weight:bold;">⚠️ This product contains {{ haram_count }} haram ingredient(s).</p>
@@ -51,7 +67,6 @@
                 <p style="color:green; font-weight:bold;">✅ This product is fully halal — no haram ingredients detected.</p>
             {% endif %}
 
-            <!-- Ingredient badges -->
             <div>
                 {% for status, ing in ingredients %}
                     <span class="{{ status }}">{{ ing }}</span>
