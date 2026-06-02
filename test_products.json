@@ -1,0 +1,64 @@
+{
+  "products": [
+    {
+      "barcode": "4001686320006",
+      "name": "Haribo Goldbears",
+      "ingredients": ["Sugar", "Glucose Syrup", "Gelatin", "Citric Acid", "Fruit Juice"],
+      "haram": ["Gelatin"]
+    },
+    {
+      "barcode": "043000200345",
+      "name": "Jell-O Strawberry",
+      "ingredients": ["Sugar", "Gelatin", "Artificial Flavor", "Color (Red 40)"],
+      "haram": ["Gelatin"]
+    },
+    {
+      "barcode": "072400130204",
+      "name": "Jiffy Corn Muffin Mix",
+      "ingredients": ["Cornmeal", "Sugar", "Hydrogenated Lard", "Wheat Flour"],
+      "haram": ["Hydrogenated Lard"]
+    },
+    {
+      "barcode": "022000159751",
+      "name": "Altoids Mints",
+      "ingredients": ["Sugar", "Gelatin", "Peppermint Oil"],
+      "haram": ["Gelatin"]
+    },
+    {
+      "barcode": "079200100528",
+      "name": "Nerds Rope",
+      "ingredients": ["Sugar", "Corn Syrup", "Gelatin", "Artificial Flavors"],
+      "haram": ["Gelatin"]
+    },
+    {
+      "barcode": "038000199891",
+      "name": "Rice Krispies Treats",
+      "ingredients": ["Rice", "Sugar", "Corn Syrup", "Gelatin"],
+      "haram": ["Gelatin"]
+    },
+    {
+      "barcode": "4056489244882",
+      "name": "Lidl Pure Lard",
+      "ingredients": ["Pork Lard"],
+      "haram": ["Pork Lard"]
+    },
+    {
+      "barcode": "049000043427",
+      "name": "Baileys Irish Cream",
+      "ingredients": ["Cream", "Whiskey", "Sugar"],
+      "haram": ["Whiskey", "Alcohol"]
+    },
+    {
+      "barcode": "089000000123",
+      "name": "Pepperoni Pizza",
+      "ingredients": ["Wheat Flour", "Cheese", "Pepperoni", "Tomato Sauce"],
+      "haram": ["Pepperoni"]
+    },
+    {
+      "barcode": "089000000456",
+      "name": "Bacon Chips",
+      "ingredients": ["Potatoes", "Oil", "Bacon Flavor", "Salt"],
+      "haram": ["Bacon"]
+    }
+  ]
+}
